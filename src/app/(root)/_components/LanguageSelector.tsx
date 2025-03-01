@@ -27,7 +27,8 @@ function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
   }, []);
 
   const handleLanguageSelect = (langId: string) => {
-
+    setLanguage(langId);
+    setIsOpen(false);
   }
 
   return (
