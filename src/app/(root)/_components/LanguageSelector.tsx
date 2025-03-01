@@ -6,10 +6,12 @@ import { LANGUAGE_CONFIG } from "../_constants";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { ChevronDownIcon, LandPlotIcon, Sparkles } from "lucide-react";
+import useMounted from "@/hooks/useMounted";
 
 // function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
 function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
   const [isOpen, setIsOpen] = useState(false);
+  const mounted = useMounted();
   const { language, setLanguage } = useCodeEditorStore();
   const dropdownRef = useRef<HTMLDivElement>(null);
 
@@ -30,6 +32,12 @@ function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
     setLanguage(langId);
     setIsOpen(false);
   }
+
+
+  
+  if(!mounted) return null;
+
+
 
   return (
     <div className="relative" ref={dropdownRef}>
