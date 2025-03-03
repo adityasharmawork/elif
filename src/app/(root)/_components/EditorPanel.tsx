@@ -29,19 +29,23 @@ function EditorPanel () {
   }, [fontSize]); 
 
   const handleRefresh = () => {
-
+    const defaultCode = LANGUAGE_CONFIG[language].defaultCode;
+    if(editor) editor.setValue(defaultCode);
+    localStorage.removeItem(`editor-code-${language}`);
   }
 
-  const handleEditorChange = () => {
-
+  const handleEditorChange = (value: string | undefined) => {
+    if(value) localStorage.setItem(`editor-code-${language}`, value);
   }
 
   const handleFontSizeChange = (newSize: number) => {
-
+    const size = Math.min(Math.max(newSize, 12), 24);
+    setFontSize(size);
+    localStorage.setItem("editor-font-size", size.toString());
   }
 
 
-  if(!mounted) return <EditorViewSkeleton />
+  if(!mounted) return null;
 
   return (
     <div className="relative">
@@ -134,7 +138,7 @@ function EditorPanel () {
             }}
           /> )}
 
-          {/* { !clerk.loaded && <EditorPanelSkeleton /> } */}
+          { !clerk.loaded && <EditorPanelSkeleton /> }
         </div>
 
       </div>
