@@ -1,16 +1,29 @@
 "use client";
 
-import { useCodeEditorStore } from "@/store/useCodeEditorStore";
+import { getExecutionResult, useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { useUser } from "@clerk/nextjs";
+import { useMutation } from "convex/react";
 import { motion } from "framer-motion";
 import { Loader2, Play } from "lucide-react";
+import { api } from "../../../../convex/_generated/api";
 
 function RunButton () {
   const { user } = useUser();
   const { runCode, language, isRunning, executionResult } = useCodeEditorStore();
+  const savedExecution = useMutation(api.codeExecutions.saveExecution);
 
   const handleRun = async () => {
+    await runCode();
+    const result = getExecutionResult();
 
+    if(user && result) {
+      await savedExecution({
+        language,
+        code: result.code,
+        output: result.output,
+        error: result.error || undefined,
+      });
+    }
   }
 
   return (
@@ -19,7 +32,7 @@ function RunButton () {
       disabled={isRunning}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className={` group relative inline-flex items-center gap-2.5 px-5 py-2.5 disabled: cursor-not-allowed focus: outline-none `}
+      className={` group relative inline-flex items-center gap-2.5 px-5 py-2.5 disabled:cursor-not-allowed focus: outline-none `}
     >
       {/* BG with gradient effect */}
       <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl opacity-100 transition-opacity group-hover:opacity-90" />
