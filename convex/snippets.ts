@@ -1,4 +1,4 @@
-import { v } from "convex/values";
+import { convexToJson, v } from "convex/values";
 import { mutation, query } from "./_generated/server";
 
 export const createSnippet = mutation({
@@ -55,4 +55,19 @@ export const isSnippetStarred = query({
 
         return !!star;
     },
+});
+
+export const getSnippetStarCount = query({
+    args: {
+        snippetId: v.id("snippets"),
+    },
+    handler: async (ctx, args) => {
+        const stars = await ctx.db
+        .query("stars")
+        .withIndex("by_snippet_id")
+        .filter((q) => q.eq(q.field("snippetId"), args.snippetId))
+        .collect();
+
+        return stars.length;
+    }
 });
