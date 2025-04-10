@@ -145,8 +145,9 @@ function EditorPanel () {
       </div>
 
       {isShareDialogOpen && <ShareSnippetDialog onClose={() => setIsShareDialogOpen(false)} />}
+    
     </div>
-  )
+  );
 }
 
 export default EditorPanel
