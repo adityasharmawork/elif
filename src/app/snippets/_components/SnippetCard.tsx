@@ -121,6 +121,7 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
         </div>
       </Link>
     </motion.div>
+    
   );
 }
 
