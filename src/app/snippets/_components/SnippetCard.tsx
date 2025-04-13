@@ -6,6 +6,7 @@ import { api } from "../../../../convex/_generated/api";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Clock, Link, StarIcon, Trash2, User } from "lucide-react";
+import Image from "next/image";
 
 function SnippetCard({snippet}: {snippet: Snippet}) {
     const { user } = useUser();
@@ -43,7 +44,7 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
                     className="relative p-2 rounded-lg bg-gradient-to-br from-blue-500/10 to-purple-500/10 group-hover:from-blue-500/20
                    group-hover:to-purple-500/20 transition-all duration-500"
                   >
-                    <img
+                    <Image
                       src={`/${snippet.language}.png`}
                       alt={`${snippet.language} logo`}
                       className="w-6 h-6 object-contain relative z-10"
