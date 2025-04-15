@@ -9,7 +9,7 @@ import { ChevronDownIcon, LandPlotIcon, Sparkles } from "lucide-react";
 import useMounted from "@/hooks/useMounted";
 
 // function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
-function LanguageSelector ({ hasAccess }: { hasAccess: boolean }) {
+function LanguageSelector () {
   const [isOpen, setIsOpen] = useState(false);
   const mounted = useMounted();
   const { language, setLanguage } = useCodeEditorStore();
