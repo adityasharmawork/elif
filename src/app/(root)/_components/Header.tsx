@@ -116,7 +116,6 @@ async function Header() {
           <div className="flex items-center gap-3">
             <ThemeSelector />
             <LanguageSelector />
-            {/* <LanguageSelector hasAccess={Boolean(convexUser?.isPro)} /> */}
           </div>
 
           {/* {!convexUser?.isPro && (
