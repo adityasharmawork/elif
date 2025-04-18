@@ -1,9 +1,12 @@
+import { useUser } from "@clerk/nextjs"
 import { Id } from "../../../../../convex/_generated/dataModel"
+import { useState } from "react";
 
 function Comments({ snippetId }: { snippetId: Id<"snippets"> }) {
-  return (
-    <div>Comments</div>
-  )
-}
 
-export default Comments
+    const { user } = useUser();
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
+
+}
+export default Comments;
