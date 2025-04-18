@@ -8,5 +8,9 @@ function Comments({ snippetId }: { snippetId: Id<"snippets"> }) {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [deletingCommentId, setDeletingCommentId] = useState<string | null>(null);
 
+  return (
+    <div>Comments</div>
+  )
 }
-export default Comments;
+
+export default Comments
