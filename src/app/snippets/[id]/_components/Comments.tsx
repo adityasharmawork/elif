@@ -29,7 +29,18 @@ function Comments({ snippetId }: { snippetId: Id<"snippets"> }) {
 
     }
 
-    
+    const handleDeleteComment = async (commentId: Id<"snippetComments">) => {
+        setDeletingCommentId(commentId);
+
+        try {
+            await deleteComment({ commentId });
+        } catch (error) {
+            console.log("Error deleting comment:", error);
+            toast.error("Something went wrong");
+        } finally {
+            setDeletingCommentId(null);
+        }
+    }
 
   return (
     <div>Comments</div>
