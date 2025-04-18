@@ -1,4 +1,5 @@
 "use client";
+
 import { Snippet } from "@/types"
 import { useUser } from "@clerk/nextjs";
 import { useMutation } from "convex/react";
