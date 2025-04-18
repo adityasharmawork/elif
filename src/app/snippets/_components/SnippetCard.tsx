@@ -10,6 +10,7 @@ import { Clock, StarIcon, Trash2, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import toast from "react-hot-toast";
+import StarButton from "@/components/StarButton";
 
 function SnippetCard({snippet}: {snippet: Snippet}) {
     const { user } = useUser();
@@ -81,7 +82,7 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
               >
                 {/* <StarButton snippetId={snippet._id} /> */}
 
-                <StarIcon />
+                <StarButton snippetId={snippet._id} />
 
                 {user?.id === snippet.userId && (
                   <div className="z-10" onClick={(e) => e.preventDefault()}>
