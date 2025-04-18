@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 import { Clock, StarIcon, Trash2, User } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import toast from "react-hot-toast";
 
 function SnippetCard({snippet}: {snippet: Snippet}) {
     const { user } = useUser();
@@ -15,7 +16,16 @@ function SnippetCard({snippet}: {snippet: Snippet}) {
     const [isDeleting, setIsDeletng] = useState(false);
 
     const handleDelete = async () => {
-
+      setIsDeletng(true);
+      
+      try {
+        await deleteSnippet({ snippetId: snippet._id });
+      } catch (error) {
+        console.log("Error deleting snippet: ", error);
+        toast.error("Error deleting snippet");
+      } finally {
+        setIsDeletng(false);
+      }
     }
 
   return (

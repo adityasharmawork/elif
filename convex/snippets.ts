@@ -47,7 +47,7 @@ export const deleteSnippet = mutation({
         if(snippet.userId !== identity.subject) {
             throw new Error("Not authorized to delete this snippet");
         }
-        SVGGeometryElement
+        
         const comments = await ctx.db
         .query("snippetComments")
         .withIndex("by_snippet_id")
@@ -71,6 +71,7 @@ export const deleteSnippet = mutation({
         await ctx.db.delete(args.snippetId);
     }
 });
+
 
 export const starSnippet = mutation({
     args: {
