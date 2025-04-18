@@ -10,12 +10,15 @@ import { Clock, Code, MessageSquare, User } from "lucide-react";
 import { Editor } from "@monaco-editor/react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "@/app/(root)/_constants";
 import CopyButton from "./_components/CopyButton";
+import Comments from "./_components/Comments";
 
 
 function SnippetDetailPage() {
     const snippetId = useParams().id;
 
     const snippet = useQuery(api.snippets.getSnippetById, { snippetId: snippetId as Id<"snippets"> });
+
+    const comments = useQuery(api.snippets.getComments, { snippetId: snippetId as Id<"snippets"> });
 
 
     if(snippet === undefined) return <SnippetLoadingSkeleton />
@@ -25,6 +28,7 @@ function SnippetDetailPage() {
         <NavigationHeader />
 
         <main className="max-w-[90rem] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-12">
+            <div className="max-w-[1200px] mx-auto">
              {/* Header */}
             <div className="bg-[#121218] border border-[#ffffff0a] rounded-2xl p-6 sm:p-8 mb-6 backdrop-blur-xl">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-6">
@@ -51,7 +55,7 @@ function SnippetDetailPage() {
                         </div>
                         <div className="flex items-center gap-2 text-[#8b8b8d]">
                         <MessageSquare className="w-4 h-4" />
-                        {/* <span>{comments?.length} comments</span> */}
+                        <span>{comments?.length} comments</span>
                         </div>
                     </div>
                     </div>
@@ -92,6 +96,9 @@ function SnippetDetailPage() {
                 />
             </div>
 
+            <Comments snippetId={ snippet._id } />
+
+            </div>
         </main>
 
     </div>
