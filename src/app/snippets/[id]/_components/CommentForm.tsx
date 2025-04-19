@@ -2,7 +2,7 @@ import { CodeIcon, SendIcon } from "lucide-react";
 import { useState } from "react";
 
 interface CommentFormProps {
-    onSubmit: (content: string) => Promise<void>;
+    onSubmit: (comment: string) => Promise<void>;
     isSubmitting: boolean;
 }
 
@@ -15,8 +15,15 @@ function CommentForm({onSubmit, isSubmitting}: CommentFormProps) {
 
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
 
+        if(!comment.trim()) return;
+
+        await onSubmit(comment);
+
+        setComment("");
+        setIsPreview(false);
     }
 
   return (
