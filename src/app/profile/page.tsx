@@ -27,6 +27,10 @@ function ProfilePage() {
 
     const userData = useQuery(api.users.getUser, { userId: user?.id ?? "" });
 
+    const handleLoadMore = () => {
+        if(executionStatus === "CanLoadMore") loadMore(5);
+    }
+
   return (
     <div>ProfilePage</div>
   )
