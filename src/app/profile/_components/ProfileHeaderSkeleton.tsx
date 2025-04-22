@@ -10,10 +10,10 @@ function ProfileHeaderSkeleton() {
           <div className="relative">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-600/20 rounded-full blur-xl" />
             <div className="w-24 h-24 rounded-full bg-gray-800/80 animate-pulse relative z-10 border-4 border-gray-800/50" />
-            <div
+            {/* <div
               className="absolute -top-2 -right-2 w-8 h-8 bg-gradient-to-r from-purple-500/50 
             to-purple-600/50 rounded-full z-20 animate-pulse"
-            />
+            /> */}
           </div>
   
           {/* User Info Skeleton */}
