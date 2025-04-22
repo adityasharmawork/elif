@@ -2,6 +2,7 @@ import { useQuery } from "convex/react"
 import { api } from "../../../../convex/_generated/api"
 import { Activity, Code2, Star, Timer, TrendingUp, Trophy, UserIcon, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import { Id } from "../../../../convex/_generated/dataModel";
 
 interface ProfileHeaderProps {
     userStats: {
@@ -13,7 +14,13 @@ interface ProfileHeaderProps {
       languageStats: Record<string, number>;
       mostStarredLanguage: string;
   },
-    userData: any,
+    userData: {
+      _id: Id<"users">;
+      _creationTime: number;
+      name: string;
+      userId: string;
+      email: string;
+  },
     user: any
 }
 
