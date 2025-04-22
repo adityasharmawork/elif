@@ -4,7 +4,15 @@ import { Activity, Code2, Star, Timer, TrendingUp, Trophy, UserIcon, Zap } from 
 import { motion } from "framer-motion";
 
 interface ProfileHeaderProps {
-    userStats: any,
+    userStats: {
+      totalExecutions: number;
+      languagesCount: number;
+      languages: string[];
+      last24Hours: number;
+      favoriteLanguage: string;
+      languageStats: Record<string, number>;
+      mostStarredLanguage: string;
+  },
     userData: any,
     user: any
 }
