@@ -7,6 +7,7 @@ import { Star } from "lucide-react";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 import FeatureCategory from "./_components/FeatureCategory";
 import FeatureItem from "./_components/FeatureItem";
+import HomepageButton from "./_components/HomepageButton";
 
 async function LandingPage() {
 
@@ -88,7 +89,7 @@ async function LandingPage() {
                   <div className="inline-flex p-3 rounded-xl bg-gradient-to-br from-blue-500/10 to-purple-500/10 ring-1 ring-gray-800/60 mb-6">
                     <Star className="w-8 h-8 text-blue-400" />
                   </div>
-                  <h2 className="text-3xl font-semibold text-white mb-4">Lifetime Pro Access</h2>
+                  <h2 className="text-3xl font-semibold text-white mb-4">Lifetime Pro Access for Free</h2>
                   {/* <div className="flex items-baseline justify-center gap-2 mb-4">
                     <span className="text-2xl text-gray-400">$</span>
                     <span className="text-6xl font-semibold bg-gradient-to-r from-gray-100 to-gray-300 text-transparent bg-clip-text">
@@ -96,7 +97,7 @@ async function LandingPage() {
                     </span>
                     <span className="text-xl text-gray-400">one-time</span>
                   </div> */}
-                  <p className="text-gray-400 text-lg">Unlock the full potential of CodeCraft</p>
+                  <p className="text-gray-400 text-lg">Unlock the full potential of Elif</p>
                 </div>
 
                 {/* Features grid */}
@@ -121,15 +122,15 @@ async function LandingPage() {
                 </div>
 
                 {/* CTA */}
-                {/* <div className="flex justify-center">
+                <div className="flex justify-center">
                   <SignedIn>
-                    <UpgradeButton />
+                    <HomepageButton />
                   </SignedIn>
 
-                  <SignedOut>
+                  {/* <SignedOut>
                     <LoginButton />
-                  </SignedOut>
-                </div> */}
+                  </SignedOut> */}
+                </div>
               </div>
             </div>
           </div>
