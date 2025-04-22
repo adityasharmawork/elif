@@ -2,9 +2,11 @@ import { currentUser } from "@clerk/nextjs/server"
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import NavigationHeader from "@/components/NavigationHeader";
-import { ENTERPRISE_FEATURES } from "./_constants";
+import { ENTERPRISE_FEATURES, FEATURES } from "./_constants";
 import { Star } from "lucide-react";
 import { SignedIn, SignedOut } from "@clerk/nextjs";
+import FeatureCategory from "./_components/FeatureCategory";
+import FeatureItem from "./_components/FeatureItem";
 
 async function LandingPage() {
 
@@ -98,7 +100,7 @@ async function LandingPage() {
                 </div>
 
                 {/* Features grid */}
-                {/* <div className="grid md:grid-cols-3 gap-12 mb-12">
+                <div className="grid md:grid-cols-3 gap-12 mb-12">
                   <FeatureCategory label="Development">
                     {FEATURES.development.map((feature, idx) => (
                       <FeatureItem key={idx}>{feature}</FeatureItem>
@@ -116,7 +118,7 @@ async function LandingPage() {
                       <FeatureItem key={idx}>{feature}</FeatureItem>
                     ))}
                   </FeatureCategory>
-                </div> */}
+                </div>
 
                 {/* CTA */}
                 {/* <div className="flex justify-center">
