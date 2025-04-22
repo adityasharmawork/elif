@@ -8,6 +8,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import FeatureCategory from "./_components/FeatureCategory";
 import FeatureItem from "./_components/FeatureItem";
 import HomepageButton from "./_components/HomepageButton";
+import LoginButton from "@/components/LoginButton";
 
 async function LandingPage() {
 
@@ -127,9 +128,9 @@ async function LandingPage() {
                     <HomepageButton />
                   </SignedIn>
 
-                  {/* <SignedOut>
+                  <SignedOut>
                     <LoginButton />
-                  </SignedOut> */}
+                  </SignedOut>
                 </div>
               </div>
             </div>
