@@ -26,7 +26,7 @@ export const ENTERPRISE_FEATURES = [
 export const FEATURES = {
   development: [
     "Advanced AI",
-    "Custom theme builder",
+    "Custom themes",
     "Integrated debugging tools",
     "Multi-language support",
   ],
