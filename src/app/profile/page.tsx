@@ -11,9 +11,10 @@ import ProfileHeaderSkeleton from "./_components/ProfileHeaderSkeleton";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronRight, Clock, Code, ListVideo, Loader2, Star } from "lucide-react";
 import Image from "next/image";
-import CodeBlock from "../snippets/[id]/_components/CodeBlock";
+
 import Link from "next/link";
 import StarButton from "@/components/StarButton";
+import CodeBlock from "./_components/CodeBlock";
 
 
 const TABS = [
