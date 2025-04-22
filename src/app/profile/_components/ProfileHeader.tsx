@@ -3,6 +3,7 @@ import { api } from "../../../../convex/_generated/api"
 import { Activity, Code2, Star, Timer, TrendingUp, Trophy, UserIcon, Zap } from "lucide-react";
 import { motion } from "framer-motion";
 import { Id } from "../../../../convex/_generated/dataModel";
+import { UserResource } from "@clerk/types";
 
 interface ProfileHeaderProps {
     userStats: {
@@ -21,7 +22,7 @@ interface ProfileHeaderProps {
       userId: string;
       email: string;
   },
-    user: any
+    user: UserResource
 }
 
 function ProfileHeader({ userStats, userData, user }: ProfileHeaderProps) {
