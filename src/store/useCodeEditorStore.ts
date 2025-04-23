@@ -13,13 +13,13 @@ const getInitialState = () => {
         return {
             language: "javascript", 
             fontSize: 16,
-            theme: "vs-dark",
+            theme: "github-dark",
         }
     }
 
     // If we are on the client, return the values from local storage because local storage is a browser API
     const savedLanguage = localStorage.getItem("editor-language") || "javascript";
-    const savedTheme = localStorage.getItem("editor-theme") || "vs-dark";
+    const savedTheme = localStorage.getItem("editor-theme") || "github-dark";
     const savedFontSize = localStorage.getItem("editor-font-size") || 16;
 
     return {
