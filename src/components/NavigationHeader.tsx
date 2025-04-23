@@ -99,7 +99,7 @@
 
 
 
-import HeaderProfileBtn from "@/app/(root)/_components/HeaderProfileBtn";
+import HeaderProfileBtn from "@/app/editor/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
 import { Code2, Code, Container } from "lucide-react";
 import Link from "next/link";
@@ -133,7 +133,7 @@ function NavigationHeader() {
 
             {/* Editor Link */}
             <Link
-              href="/"
+              href="/editor"
               className="relative group flex items-center gap-2 px-4 py-1.5 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 
               border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
             >
