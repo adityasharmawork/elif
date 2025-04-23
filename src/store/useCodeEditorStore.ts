@@ -1,8 +1,8 @@
 import { LANGUAGE_CONFIG } from "@/app/(root)/_constants";
 import { create } from "zustand";
-import { Editor, Monaco } from "@monaco-editor/react";
+import { Monaco } from "@monaco-editor/react";
 import { CodeEditorState } from "@/types";
-import { currentUser } from "@clerk/nextjs/server";
+// import { currentUser } from "@clerk/nextjs/server";
 
 
 
