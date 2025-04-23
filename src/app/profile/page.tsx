@@ -66,7 +66,7 @@ function ProfilePage() {
             {/* Profile Header */}
 
             {userStats && userData && (
-                <ProfileHeader  userStats={userStats} userData={userData} user={user} />
+                <ProfileHeader  userStats={userStats} userData={userData} user={user!} />
             )}
 
             {(userStats === undefined || !isLoaded) && 
