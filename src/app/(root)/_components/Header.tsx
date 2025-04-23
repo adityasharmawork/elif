@@ -37,7 +37,7 @@
 
 
 
-import { currentUser } from "@clerk/nextjs/server";
+// import { currentUser } from "@clerk/nextjs/server";
 // import { ConvexHttpClient } from "convex/browser";
 // import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
