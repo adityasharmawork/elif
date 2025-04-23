@@ -101,7 +101,7 @@
 
 import HeaderProfileBtn from "@/app/editor/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
-import { Code2, Code, Container } from "lucide-react";
+import { Code, Container } from "lucide-react";
 import Link from "next/link";
 
 function NavigationHeader() {

@@ -1,4 +1,4 @@
-import { Blocks, Code } from "lucide-react";
+import { Code } from "lucide-react";
 import Link from "next/link";
 
 function Footer() {
