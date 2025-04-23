@@ -1,5 +1,5 @@
-import { currentUser } from "@clerk/nextjs/server"
-import { ConvexHttpClient } from "convex/browser";
+// import { currentUser } from "@clerk/nextjs/server"
+// import { ConvexHttpClient } from "convex/browser";
 import NavigationHeader from "@/components/NavigationHeader";
 import { ENTERPRISE_FEATURES, FEATURES } from "./_constants";
 import { Star } from "lucide-react";
