@@ -9,7 +9,7 @@ export const ENTERPRISE_FEATURES = [
   {
     icon: Shield,
     label: "Enterprise Security",
-    desc: "Bank-grade encryption and security protocols",
+    desc: "High-grade encryption and security protocols",
   },
   {
     icon: RefreshCcw,
@@ -33,13 +33,13 @@ export const FEATURES = {
   collaboration: [
     "Real-time pair programming",
     "Team workspaces",
-    "Version control integration",
+    "Code snippet sharing",
     "Code review tools",
   ],
-  deployment: [
-    "One-click deployment",
-    "CI/CD integration",
-    "Container support",
-    "Custom domain mapping",
+  productivity: [
+    "Personalized Dashboard",
+    "Session Store",
+    "Managed Code Executions",
+    "Keyboard shortcuts & command palette",
   ],
 };

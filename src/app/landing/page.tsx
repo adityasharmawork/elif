@@ -114,8 +114,8 @@ async function LandingPage() {
                     ))}
                   </FeatureCategory>
 
-                  <FeatureCategory label="Deployment">
-                    {FEATURES.deployment.map((feature, idx) => (
+                  <FeatureCategory label="Productivity">
+                    {FEATURES.productivity.map((feature, idx) => (
                       <FeatureItem key={idx}>{feature}</FeatureItem>
                     ))}
                   </FeatureCategory>
