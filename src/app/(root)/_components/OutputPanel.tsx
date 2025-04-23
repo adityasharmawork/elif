@@ -2,7 +2,7 @@
 
 import { useCodeEditorStore } from "@/store/useCodeEditorStore";
 import { AlertTriangle, CheckCircle, Clock, Copy, Terminal } from "lucide-react";
-import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
+import { SignedIn, SignedOut } from "@clerk/nextjs";
 import { useState } from "react";
 import RunningCodeSkeleton from "./RunningCodeSkeleton";
 
