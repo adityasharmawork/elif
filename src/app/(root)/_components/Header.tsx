@@ -53,9 +53,9 @@ async function Header() {
   const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   const user = await currentUser();
 
-  const convexUser = await convex.query(api.users.getUser, {
-    userId: user?.id || "",
-  });
+  // const convexUser = await convex.query(api.users.getUser, {
+  //   userId: user?.id || "",
+  // });
 
   return (
     <div className="relative z-10">
