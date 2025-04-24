@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🧠 elif – Elevate the Way You Code
 
-## Getting Started
+[![Made with ❤️ in Next.js](https://img.shields.io/badge/Made%20with%20%E2%9D%A4%EF%B8%8F%20in-Next.js-000?style=for-the-badge&logo=next.js)](https://nextjs.org/)
 
-First, run the development server:
+Welcome to **elif**, your next-generation online IDE built for modern developers.  
+Whether you're a seasoned pro or just getting started, elif gives you a powerful, beautiful, and seamless environment to write, run, and share code with confidence.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+🔗 **Live Deployed Link:** [dub.sh/elif](https://dub.sh/elif)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework:** [Next.js 15](https://nextjs.org/)
+- **Backend as a Service:** [Convex](https://convex.dev/)
+- **Authentication:** [Clerk](https://clerk.dev/)
+- **State Management:** [Zustand](https://zustand-demo.pmnd.rs/)
+- **Styling:** [TailwindCSS](https://tailwindcss.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Editor:** [Monaco Editor](https://microsoft.github.io/monaco-editor/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **Syntax Highlighting:** [React Syntax Highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+- **Language:** TypeScript
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🎯 Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 💻 Multi-Language Online IDE  
+Supports 10+ programming languages including:
+- JavaScript, TypeScript, C++, Java, Python, Rust, Go, C#, Ruby, and Swift
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 🎨 Developer-Centric Customization  
+- Choose from 5 VS Code-inspired themes to match your vibe:
+  - 🖤 **VS Dark** – Classic dark mode for a sleek dev experience  
+  - 🤍 **VS Light** – Clean and minimal for daylight coding  
+  - 🌌 **GitHub Dark** – Inspired by GitHub’s elegant dark UI  
+  - 🌈 **Monokai** – High-contrast, vibrant syntax highlighting  
+  - 🌅 **Solarized Dark** – Gentle color palette for reduced eye strain  
+- Adjustable font sizes for comfortable, distraction-free coding  
+- Personalized coding environment with session persistence
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ✨ Smart Output Handling  
+- Intelligent Success & Error states  
+- Clear, color-coded console feedback
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 📊 Personal Analytics Dashboard  
+- Track execution history  
+- Monitor personal performance and usage stats
+
+### 🔍 Advanced Filtering & Search  
+- Quickly find snippets, shared code, or language-specific executions
+
+### 👤 Developer Profiles  
+- Execution history  
+- Shared snippets  
+- Code contributions
+
+### 💬 Community-Driven Code Sharing  
+- Share your code with others  
+- Explore community snippets  
+- Engage through reactions and discussions
+
+### ⚙️ Pro-Level Dev Tools  
+- Webhook integrations  
+- Custom font controls  
+- Professional deployment walkthrough
+
+---
+
+## 🌟 Getting Started
+
+1. Visit [dub.sh/elif](https://dub.sh/elif)
+2. Sign up using Clerk (GitHub, Google, or Email)
+3. Choose your favorite language & theme
+4. Start writing, executing, and sharing code instantly!
+
+---
+
+## 📫 Stay Connected
+
+For updates, feedback, or questions:  
+📧 [developeradityasharma@gmail.com]  
+📱 Follow us on [Twitter](https://x.com/AdityaSharma056) | [LinkedIn](https://www.linkedin.com/in/adityasharma123/) | [GitHub](https://github.com/adityasharmawork)
